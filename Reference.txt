@@ -1,0 +1,18 @@
+Errors:
+
+No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://127.0.0.1' is therefore not allowed access.
+
+Unexpected token : - when using callback (jsonp)
+
+Install Allow-Control-Allow-Origin plugin from Chrome.
+
+CORS Links
+http://www.html5rocks.com/en/tutorials/cors/
+https://jvaneyck.wordpress.com/2014/01/07/cross-domain-requests-in-javascript/
+http://www.sitepoint.com/working-around-origin-policy/
+
+JSON Validator
+http://jsonlint.com/
+http://json-p.org/validator.html
+
+http://jsonformatter.curiousconcept.com/
