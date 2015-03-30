@@ -25,6 +25,7 @@ $(document).ready(function () {
         var itemprice = $('p.priceTag').html();
         $('#heroprice').append('<p class="prodprice">' + itemprice + '</p>');
         var itemArray = $('.itemList');
+
         itemArray.each(function (i) {
             $(this).mouseenter(function () {
                 $('#heroimage').html('');
