@@ -1,0 +1,44 @@
+ul#results {
+    margin: 0 10%;
+}
+
+li {
+    list-style: none;
+    padding: 0.8em;
+    display: inline-block;
+    margin: 0.7em;
+    border: 2px solid rgba(122, 122, 122, 0.48);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+img.hover {
+    margin: 2em;
+    padding-left: 1em;
+}
+
+p {
+    text-align: center;
+    font-size: 0.7em;
+    font-family: Arial, serif;
+    color: #33363A;
+    width: 16em;
+    padding: 1em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1.5em;
+}
+
+p.priceTag {
+    font-weight: bold;
+}
+
+.viewBtn {
+    border: 2px solid #7A7A7A;
+    background-color: #B7B7B7;
+    padding: 0.5em 1em;
+    text-align: center;
+    font-family: arial, serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-top: 1.2em;
+}
