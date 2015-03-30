@@ -15,6 +15,7 @@
 $(document).ready(function () {
     $('#results').html('');
 
+    var productPrice = $('.prodprice', this).html();
 
     function itemHover(item) {
 
@@ -33,18 +34,22 @@ $(document).ready(function () {
                 $('#heroprice').html('');
                 var bigImage = $('.hover')[i].src;
                 $('#heroimage').append('<img src=' + bigImage + ' alt="photo" > ');
-                var itemDesc = $('p.desc').html();
+                var itemDesc = $('p.desc', this).html();
                 $('#herodesc').append('<p>' + itemDesc + '</p>');
-                var itemPrice = $('p.priceTag').html();
+                var itemPrice = $('p.priceTag', this).html();
                 $('#heroprice').append('<p>' + itemPrice + '</p>');
 
             });
+
+        });
+        $('#addcart').click(function () {
+            var productPrice = $('#heroprice .prodprice').html();
+            alert("Price is" + productPrice);
         });
     }
-    $('#addcart').click(function () {
-        var productPrice = $('.prodprice').html();
-        alert("Price is" + productPrice);
-    });
+
+
+
 
     $.ajax({
         type: 'GET',

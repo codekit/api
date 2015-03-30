@@ -2,7 +2,7 @@ body {
     margin: 0 5%;
 }
 
-#masthead {
+#hero {
     border: 2px solid rgba(122, 122, 122, 0.48);
     background-color: rgba(255, 255, 255, 1);
 }
@@ -17,10 +17,23 @@ body {
     font-size: 0.9em;
 }
 
+#masthead,
+#prodlist {
+    margin: 1em auto 1em;
+}
+
 #heroimage {}
 
 #herodesc {
     margin: 1em 0;
+}
+
+#herobrand {
+    margin: 1em;
+}
+
+#herocart {
+    margin-left: 7em
 }
 
 #points {
@@ -63,7 +76,7 @@ ul#points li {}
     list-style: none;
     padding: 0.8em;
     display: inline-block;
-    margin: 0.7em;
+    margin: 0.7em 0.7em 0.7em 0;
     border: 2px solid rgba(122, 122, 122, 0.48);
     background-color: rgba(255, 255, 255, 1);
 }
@@ -105,14 +118,60 @@ p.priceTag {
     margin-top: 1.2em;
 }
 
-@media only screen and (max-width: 914px) {
+@media only screen and (min-width: 1166px) {
     body {
         margin: 0 3%;
+    }
+    #masthead,
+    #prodlist {
+        margin: margin: 1em auto 1em;
     }
     #herodesc p {
         width: 344px;
     }
+    #results li {
+        margin: 0.7em 2.7em 0.7em 0;
+    }
+}
+
+@media only screen and (max-width: 914px) {
+    body {
+        margin: 0 3%;
+    }
+    #herobrand {
+        margin: 0;
+    }
+    #herocart {
+        margin-left: 1em;
+    }
+    #herodesc p {
+        width: 323px;
+        line-height: 1.3em;
+    }
+    #results li {
+        margin: 0.7em 2.7em 0.7em 0;
+    }
 }
 /* For Smartphones */
 
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
+    #heroimage {
+        padding-left: 30px;
+    }
+    #herobrand {
+        margin-left: 30px;
+    }
+    #herocart {
+        margin-left: 5em;
+    }
+    #herodesc p {
+        width: 323px;
+        line-height: 1.3em;
+    }
+    #heroprice {
+        margin-top: 2em;
+    }
+    #results li {
+        margin: 0.5em 4em;
+    }
+}
