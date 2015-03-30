@@ -48,14 +48,11 @@ $(document).ready(function () {
         });
     }
 
-
-
-
     $.ajax({
         type: 'GET',
         url: 'http://m.lowes.com/IntegrationServices/resources/productList/json/v3_0/4294857975?langId=-1&storeId=10702&catalogId=10051&nValue=4294857975&storeNumber=0595&pageSize=20&firstRecord=0&refinements=5003703',
         contentType: 'text/plain',
-        xhrFields: { // to enable CORS. code from HTML5rocks.com
+        xhrFields: { // to enable CORS
             withCredentials: false
         },
         headers: {},
