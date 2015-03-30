@@ -1,8 +1,65 @@
-ul#results {
-    margin: 0 10%;
+body {
+    margin: 0 5%;
 }
 
-li {
+#masthead {
+    border: 2px solid rgba(122, 122, 122, 0.48);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#heroimage,
+#herobrand,
+#herocart {
+    display: inline-block;
+    vertical-align: top;
+    color: #33363A;
+    font-family: Arial, serif;
+    font-size: 0.9em;
+}
+
+#heroimage {}
+
+#herodesc {
+    margin: 1em 0;
+}
+
+#points {
+    list-style: inherit;
+}
+
+#points li {
+    margin: 0.5em;
+}
+
+div#hero {
+    padding: 0.2em;
+}
+
+#herodesc p {
+    width: 428px;
+}
+
+#heroprice {
+    text-align: center;
+    margin-top: 3em;
+    font-size: 1.5em;
+}
+
+#addcart {
+    border: 2px solid #7A7A7A;
+    background-color: #B7B7B7;
+    padding: 0.5em 4em;
+    text-align: center;
+    font-family: arial, serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-top: 1.8em;
+    cursor: pointer;
+}
+
+ul#points li {}
+
+#results li {
     list-style: none;
     padding: 0.8em;
     display: inline-block;
@@ -11,12 +68,16 @@ li {
     background-color: rgba(255, 255, 255, 1);
 }
 
-img.hover {
+img.itemImage {
     margin: 2em;
     padding-left: 1em;
 }
 
-p {
+img.hover {
+    display: none;
+}
+
+p.desc {
     text-align: center;
     font-size: 0.7em;
     font-family: Arial, serif;
