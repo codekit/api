@@ -10,7 +10,7 @@ $(document).ready(function () {
         var itemdesc = $('p.desc').html();
         $('#herodesc').append('<p>' + itemdesc + '</p>');
         var itemprice = $('p.priceTag').html();
-        $('#heroprice').append('<p class="prodprice">' + itemprice + '</p>');
+        $('#heroprice').html(itemprice);
         var itemArray = $('.itemList');
 
         itemArray.each(function (i) {

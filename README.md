@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-# Request data from Lowes.com API
-
-
-- Install the chrome Extension "Allow-Control-Allow-Origin" for to make cross domain AJAX request to "lowes.com" domain.
-- Enable cross-origin resource sharing.
-=======
 # Request data from Lowes.com - API
 
-Demo: http://codekit.github.io/api  
+Demo: http://codekit.github.io/api  (requires [CORS Plugin](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) from Chrome)  
 Source: https://github.com/codekit/api
 
 Ajax is used to exchange data with a server or update a web page without refreshing. Exchanging data with a server on another domain is restricted due to the same origin policy, which prevents a document or script loaded from one origin from getting or setting properties of a document from another origin.
@@ -24,8 +17,7 @@ If the server decides that the request should be allowed, it sends a `Access-Con
 Example:
 `Access-Control-Allow-Origin: http://www.abc.com`
 
-Due to this constraint, Install the chrome Extension "Allow-Control-Allow-Origin" for to make cross domain AJAX request to "lowes.com" domain. Enable cross-origin resource sharing.  
->>>>>>> f04377ac99dce27bd1cdf823ca653c1506efb679
+Due to this constraint, Install the chrome Extension [Allow-Control-Allow-Origin](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) to make cross domain AJAX request to "lowes.com" domain. Enable cross-origin resource sharing.  
 
 Make an AJAX Request to http://m.lowes.com/  
 
@@ -47,11 +39,11 @@ Hover on the Products,
 ```js
     function itemHover(item) {
         var itemHover = $('.hover')[0].src;
-        $('#heroimage').append('<img src=' + itemHover + ' alt="photo" > ');
+        $('#heroimage').append('<img src=' + itemHover + ' alt="Washers" > ');
         var itemdesc = $('p.desc').html();
         $('#herodesc').append('<p>' + itemdesc + '</p>');
         var itemprice = $('p.priceTag').html();
-        $('#heroprice').append('<p class="prodprice">' + itemprice + '</p>');
+        $('#heroprice').html(itemprice);
         var itemArray = $('.itemList');
 
         itemArray.each(function (i) {
@@ -61,10 +53,56 @@ Hover on the Products,
 
         });
         $('#addcart').click(function () { // Add to Cart button alerts the Price of Product in masthead when clicked
-            var productPrice = $('#heroprice .prodprice').html();
+            var productPrice = $('#heroprice').html();
             alert("Price is" + productPrice);
         });
     }
 ```
 
-Application is made responsive for use on iPad and iPhone
+Application is made responsive for use on iPad and iPhone.
+
+```css
+/* For Tablets */
+
+@media only screen and (max-width: 1024px) {
+    body {
+        margin: 0 3%;
+    }
+    #herobrand {
+        margin: 0;
+    }
+    #herocart {
+        margin-left: 1em;
+    }
+    #herodesc p {
+        width: 323px;
+        line-height: 1.3em;
+    }
+    #results li {
+        margin: 0.7em 2.7em 0.7em 0;
+    }
+}
+
+/* For Smartphones */
+@media only screen and (max-width: 480px) {
+    #heroimage {
+        padding-left: 30px;
+    }
+    #herobrand {
+        margin-left: 30px;
+    }
+    #herocart {
+        margin-left: 5em;
+    }
+    #herodesc p {
+        width: 323px;
+        line-height: 1.3em;
+    }
+    #heroprice {
+        margin-top: 2em;
+    }
+    #results li {
+        margin: 0.5em 4em;
+    }
+}
+```
