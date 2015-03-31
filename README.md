@@ -63,7 +63,6 @@ Application is made responsive for use on iPad and iPhone.
 
 ```css
 /* For Tablets */
-
 @media only screen and (max-width: 1024px) {
     body {
         margin: 0 3%;
