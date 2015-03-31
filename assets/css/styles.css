@@ -95,7 +95,6 @@ p.desc {
     color: #33363A;
     width: 16em;
     padding: 1em;
-    text-overflow: ellipsis;
     overflow: hidden;
     line-height: 1.5em;
 }
