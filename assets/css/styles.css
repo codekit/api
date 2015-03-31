@@ -22,8 +22,6 @@ body {
     margin: 1em auto 1em;
 }
 
-#heroimage {}
-
 #herodesc {
     margin: 1em 0;
 }
@@ -133,6 +131,7 @@ p.priceTag {
         margin: 0.7em 2.7em 0.7em 0;
     }
 }
+/* For Tablets */
 
 @media only screen and (max-width: 1024px) {
     body {

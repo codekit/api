@@ -1,17 +1,3 @@
-/*$(document).ready(function () {
-    function getResponse() {
-        $.ajax({
-            type: "GET",
-            cache: false,
-            url: "http://m.lowes.com/IntegrationServices/resources/productList/json/v3_0/4294857975?langId=-1&storeId=10702&catalogId=10051&nValue=4294857975&storeNumber=0595&pageSize=20&firstRecord=0&refinements=5003703",
-            success: function (result) {
-                console.log(result);
-            }
-        });
-    }
-    getResponse();
-}); */
-
 $(document).ready(function () {
     $('#results').html('');
 
@@ -20,7 +6,7 @@ $(document).ready(function () {
     function itemHover(item) {
 
         var itemHover = $('.hover')[0].src;
-        $('#heroimage').append('<img src=' + itemHover + ' alt="photo" > ');
+        $('#heroimage').append('<img src=' + itemHover + ' alt="Washers" > ');
         var itemdesc = $('p.desc').html();
         $('#herodesc').append('<p>' + itemdesc + '</p>');
         var itemprice = $('p.priceTag').html();
@@ -33,17 +19,17 @@ $(document).ready(function () {
                 $('#herodesc').html('');
                 $('#heroprice').html('');
                 var bigImage = $('.hover')[i].src;
-                $('#heroimage').append('<img src=' + bigImage + ' alt="photo" > ');
+                $('#heroimage').append('<img src=' + bigImage + ' alt="Washers" > ');
                 var itemDesc = $('p.desc', this).html();
                 $('#herodesc').append('<p>' + itemDesc + '</p>');
                 var itemPrice = $('p.priceTag', this).html();
-                $('#heroprice').append('<p>' + itemPrice + '</p>');
-
+                $('#heroprice').html(itemPrice);
+                console.log($('#heroprice').html());
             });
 
         });
         $('#addcart').click(function () {
-            var productPrice = $('#heroprice .prodprice').html();
+            var productPrice = $('#heroprice').html();
             alert("Price is" + productPrice);
         });
     }
@@ -66,11 +52,9 @@ $(document).ready(function () {
                 var productImagelg = result.ProductsList[i].imageURLs.lg;
                 var productSpecs = result.ProductsList[i].ProductInfo.p_product_specs;
                 var viewBtn = '<div class="viewBtn">View More</div>';
-                $('#results').append('<li class="itemList"> <img src=' + productImageSm + ' alt="photo" class="itemImage"> <img src=' + productImagelg + ' class="hover"> <p class="desc"> ' + productBrand + ' ' + productdesc + ' </p> <p class="priceTag"> $ ' + productPrice + ' </p>' + viewBtn + '</li>');
+                $('#results').append('<li class="itemList"> <img src=' + productImageSm + ' alt="Washers" class="itemImage"> <img src=' + productImagelg + ' class="hover"> <p class="desc"> ' + productBrand + ' ' + productdesc + ' </p> <p class="priceTag"> $ ' + productPrice + ' </p>' + viewBtn + '</li>');
 
                 console.log(productBrand);
-
-
             }
             itemHover(i);
         },
